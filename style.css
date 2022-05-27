@@ -1,0 +1,79 @@
+body {margin:0;}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(3, 29, 44);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 24px 28px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #000000;
+}
+.backround {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+
+.container{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.7)),rgba(0,0,0,0.7),url(IMG_9493.JPG);
+  background-position: center;
+  background-size: cover;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+
+.animals{
+  position: absolute;
+}
+#custom-cursor {
+  display: none;
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  top: -10px;
+  left: -10px;
+  border: 2px solid black;
+  border-radius: 50%;
+  opacity: 1;
+  background-color: #fb4d98;
+  pointer-events: none;
+  z-index: 99999999;
+  transition: transform ease-out 0.15s, border 0.5s, opacity 0.5s, background-color 0.5s;
+}
+
+#custom-cursor.active {
+  opacity: 0.5;
+  background-color: #000;
+  border: 2px solid #fb4d98;
+}
+.container:hover {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' ><path  d='M ... Z'/></svg>"),
+    auto;
+}
+.container:hover {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' ><path  d='M 3 5 L 3 23 C 3 25.210938 4.789063 27 7 27 L 25 27 C 27.210938 27 29 25.210938 29 23 L 29 12 L 23 12 L 23 5 Z M 5 7 L 21 7 L 21 23 C 21 23.730469 21.222656 24.410156 21.5625 25 L 7 25 C 5.808594 25 5 24.191406 5 23 Z M 7 9 L 7 14 L 19 14 L 19 9 Z M 9 11 L 17 11 L 17 12 L 9 12 Z M 23 14 L 27 14 L 27 23 C 27 24.191406 26.191406 25 25 25 C 23.808594 25 23 24.191406 23 23 Z M 7 15 L 7 17 L 12 17 L 12 15 Z M 14 15 L 14 17 L 19 17 L 19 15 Z M 7 18 L 7 20 L 12 20 L 12 18 Z M 14 18 L 14 20 L 19 20 L 19 18 Z M 7 21 L 7 23 L 12 23 L 12 21 Z M 14 21 L 14 23 L 19 23 L 19 21 Z'/></svg>"),
+    auto;
+}
+cursor-wrapper {pointer-events: none;}
